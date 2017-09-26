@@ -1,0 +1,26 @@
+{
+  "name": "email-verifier",
+  "version": "0.0.1",
+  "description": "The best possible way to verify and validate an email address.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdegges/node-email-verifier.git"
+  },
+  "keywords": [
+    "email",
+    "verify",
+    "verification",
+    "validation",
+    "validate"
+  ],
+  "author": "Randall Degges",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/rdegges/node-email-verifier/issues"
+  },
+  "homepage": "https://github.com/rdegges/node-email-verifier#readme"
+}
