@@ -46,8 +46,7 @@ describe("Verifier", () => {
 
       verifier.verify("r@rdegges.com", (err, resp) => {
         assert.ifError(err);
-        assert(resp && resp.EmailVerifyRecord);
-        assert.equal(resp.EmailVerifyRecord.emailAddress, "r@rdegges.com");
+        assert.equal(resp.emailAddress, "r@rdegges.com");
         done();
       });
     });
