@@ -2,6 +2,7 @@
 
 const backoff = require("backoff");
 const request = require("request");
+const VERSION = require("./package.json").version;
 
 
 const RETRIES = 5;
@@ -58,6 +59,9 @@ class Verifier {
   verify(email, cb) {
     let call = backoff.call(request, {
       uri: VERIFY_URI,
+      headers: {
+        "User-Agent": "node-email-verifier/" + VERSION
+      },
       qs: {
         username: this.username,
         password: this.password,
