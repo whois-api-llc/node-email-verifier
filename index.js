@@ -85,7 +85,11 @@ class Verifier {
           return cb(new Error(json.ErrorMessage.msg));
         }
 
-        cb(null, json);
+        if (json && !json.EmailVerifyRecord) {
+          return cb(new Error("Oops! It looks like whoisxmlapi.com is having issues. Sorry!"));
+        }
+
+        cb(null, json.EmailVerifyRecord);
       } catch(err) {
         cb(err);
       }
