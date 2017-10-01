@@ -23,6 +23,10 @@
     "url": "https://github.com/rdegges/node-email-verifier/issues"
   },
   "homepage": "https://github.com/rdegges/node-email-verifier#readme",
+  "dependencies": {
+    "backoff": "^2.5.0",
+    "request": "^2.82.0"
+  },
   "devDependencies": {
     "mocha": "^3.5.3"
   }
