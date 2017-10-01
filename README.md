@@ -154,6 +154,6 @@ let verifier = new Verifier("your_whoisapi_username", "your_whoisapi_password", 
 
 ## Changelog
 
-**0.1.0**: 10-1-2017
+0.1.0: *10-1-2017*
 
 - First release!
