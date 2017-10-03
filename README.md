@@ -2,11 +2,11 @@
 
 [![NPM Version](https://img.shields.io/npm/v/email-verifier.svg?style=flat)](https://npmjs.org/package/email-verifier)
 [![NPM Downloads](http://img.shields.io/npm/dm/email-verifier.svg?style=flat)](https://npmjs.org/package/email-verifier)
-[![Build Status](https://img.shields.io/travis/rdegges/node-email-verifier.svg?style=flat)](https://travis-ci.org/rdegges/node-email-verifier)
+[![Build Status](https://img.shields.io/travis/whois-api-llc/node-email-verifier.svg?style=flat)](https://travis-ci.org/whois-api-llc/node-email-verifier)
 
 *The best possible way to verify and validate an email address in Node.*
 
-![Email Verifier Icon](https://github.com/rdegges/node-email-verifier/raw/master/images/verify-email.png)
+![Email Verifier Icon](https://github.com/whois-api-llc/node-email-verifier/raw/master/images/verify-email.png)
 
 
 ## Meta
