@@ -158,6 +158,10 @@ let verifier = new Verifier("your_whoisapi_username", "your_whoisapi_password", 
 
 ## Changelog
 
+0.2.1: *10-18-2017*
+
+- Updating library to work with recent API changes.
+
 0.2.0: *10-18-2017*
 
 - Updating docs and repo path.
