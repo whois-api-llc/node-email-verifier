@@ -21,7 +21,7 @@
 ## Prerequisites
 
 To use this library, you'll need to create a free WhoisAPI account:
-https://www.whoisxmlapi.com/email-verification-api.php
+https://emailverification.whoisxmlapi.com/
 
 If you haven't done this yet, please do so now.
 
