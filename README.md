@@ -17,6 +17,10 @@
 - Site: https://www.rdegges.com
 - Status: production ready
 
+If you'd like to read an article about how this library works, please check out
+this blog post:
+https://www.whoisxmlapi.com/blog/how-to-verify-an-email-address-using-node-js/
+
 
 ## Prerequisites
 
@@ -153,6 +157,10 @@ let verifier = new Verifier("your_whoisapi_username", "your_whoisapi_password", 
 
 
 ## Changelog
+
+0.2.0: *10-18-2017*
+
+- Updating docs and repo path.
 
 0.1.0: *10-1-2017*
 
