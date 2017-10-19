@@ -89,11 +89,12 @@ class Verifier {
           return cb(new Error(json.ErrorMessage.msg));
         }
 
-        if (json && !json.EmailVerifyRecord) {
+        if (json && !json.emailAddress) {
+          console.log(json);
           return cb(new Error("Oops! It looks like whoisxmlapi.com is having issues. Sorry!"));
         }
 
-        cb(null, json.EmailVerifyRecord);
+        cb(null, json);
       } catch(err) {
         cb(err);
       }
