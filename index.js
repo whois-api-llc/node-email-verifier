@@ -6,7 +6,7 @@ const VERSION = require("./package.json").version;
 
 
 const RETRIES = 5;
-const VERIFY_URI = "https://www.whoisxmlapi.com/whoisserver/EmailVerifyService";
+const VERIFY_URI = "https://emailverification.whoisxmlapi.com/api/v1";
 
 
 /**
@@ -18,13 +18,11 @@ class Verifier {
   /**
    * Create a verifier.
    *
-   * @param {string} username - The username for your whoisxmlapi.com account.
-   * @param {string} password - The password for your whoisxmlapi.com account.
+   * @param {string} apiKey - The API key for your emailverification.whoisxmlapi.com account.
    * @param {object} opts - An object that contains all Verifier options.
    */
-  constructor(username, password, opts) {
-    this.username = username;
-    this.password = password;
+  constructor(apiKey, opts) {
+    this.apiKey = apiKey;
     this.opts = opts || {};
 
     this.verifyOptions();
@@ -37,14 +35,10 @@ class Verifier {
    *    invalid.
    */
   verifyOptions() {
-    if (!this.username) {
-      throw new Error("username required");
-    } else if (!this.password) {
-      throw new Error("password required");
-    } else if (typeof this.username !== "string") {
-      throw new Error("username must be a string");
-    } else if (typeof this.password !== "string") {
-      throw new Error("password must be a string");
+    if (!this.apiKey) {
+      throw new Error("API key required");
+    } else if (typeof this.apiKey !== "string") {
+      throw new Error("API key must be a string");
     } else if (this.opts.retries && typeof this.opts.retries !== "number") {
       throw new Error("opts.retries must be a number");
     }
@@ -63,8 +57,7 @@ class Verifier {
         "User-Agent": "node-email-verifier/" + VERSION
       },
       qs: {
-        username: this.username,
-        password: this.password,
+        apiKey: this.apiKey,
         emailAddress: email,
         validateDNS: (this.opts.validateDNS === false ? false : true),
         validateSMTP: (this.opts.validateSMTP === false ? false : true),

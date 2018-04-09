@@ -19,7 +19,7 @@
 
 If you'd like to read an article about how this library works, please check out
 this blog post:
-https://www.whoisxmlapi.com/blog/how-to-verify-an-email-address-using-node-js/
+https://emailverification.whoisxmlapi.com/blog/how-to-verify-an-email-address-using-nodejs
 
 
 ## Prerequisites
@@ -96,7 +96,7 @@ can use in your application in any number of ways.
 ```javascript
 const Verifier = require("email-verifier");
 
-let verifier = new Verifier("your_whoisapi_username", "your_whoisapi_password");
+let verifier = new Verifier("your_email_verification_api_key");
 verifier.verify("r@rdegges.com", (err, data) => {
   if (err) throw err;
   console.log(data);
@@ -128,7 +128,7 @@ can pass in your preferred checks when creating the `Verifier` object:
 ```javascript:
 const Verifier = require("email-verifier");
 
-let verifier = new Verifier("your_whoisapi_username", "your_whoisapi_password", {
+let verifier = new Verifier("your_email_verification_api_key", {
   checkCatchAll: false,
   checkDisposable: false,
   checkFree: false,
@@ -150,13 +150,17 @@ your behalf, you can pass in a `retries` option like so:
 ```javascript
 const Verifier = require("email-verifier");
 
-let verifier = new Verifier("your_whoisapi_username", "your_whoisapi_password", {
+let verifier = new Verifier("your_email_verification_api_key", {
   retries: 2
 });
 ```
 
 
 ## Changelog
+
+0.3.1: *4-9-2018*
+
+- Changed API endpoint.
 
 0.2.1: *10-18-2017*
 
