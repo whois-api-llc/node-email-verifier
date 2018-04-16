@@ -53,9 +53,7 @@ class Verifier {
   verify(email, cb) {
     let call = backoff.call(request, {
       uri: VERIFY_URI,
-      headers: {
-        "User-Agent": "node-email-verifier/" + VERSION
-      },
+      headers: { "User-Agent": "node-email-verifier/" + VERSION },
       qs: {
         apiKey: this.apiKey,
         emailAddress: email,
