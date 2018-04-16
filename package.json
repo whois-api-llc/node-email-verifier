@@ -1,6 +1,6 @@
 {
   "name": "email-verifier",
-  "version": "0.3.1",
+  "version": "0.3.0",
   "description": "The best possible way to verify and validate an email address.",
   "main": "index.js",
   "scripts": {
