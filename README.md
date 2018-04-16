@@ -158,9 +158,10 @@ let verifier = new Verifier("your_email_verification_api_key", {
 
 ## Changelog
 
-0.3.1: *4-9-2018*
+0.3.0: *4-15-2018*
 
-- Changed API endpoint.
+- Updated API endpoint.
+- Switched from using username/password auth to API key auth.
 
 0.2.1: *10-18-2017*
 
