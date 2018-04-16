@@ -4,7 +4,7 @@ const assert = require("assert");
 const Verifier = require("..");
 
 
-const API_KEY = process.env.WHOIS_API_KEY;
+const API_KEY = process.env.API_KEY;
 
 
 describe("Verifier", () => {
@@ -44,6 +44,6 @@ describe("Verifier", () => {
   });
 });
 
-if (! API_KEY) {
+if (!API_KEY) {
   throw new Error("API_KEY environment variable not set.");
 }
