@@ -48,9 +48,15 @@ class Verifier {
    * Verifies an email address using the whoisxmlapi.com service.
    *
    * @param {string} email - The email address to verify.
+   * @param {object} opts - An object that contains all options.
    * @param {callback} cb - The callback to run after verification has finished.
    */
-  verify(email, cb) {
+  verify(email, opts, cb) {
+    if (!cb) {
+      cb = opts;
+      opts = {};
+    }
+
     let call = backoff.call(request, {
       uri: VERIFY_URI,
       headers: { "User-Agent": "node-email-verifier/" + VERSION },
@@ -62,6 +68,7 @@ class Verifier {
         checkCatchAll: (this.opts.checkCatchAll === false ? false : true),
         checkFree: (this.opts.checkFree === false ? false : true),
         checkDisposable: (this.opts.checkDisposable === false ? false : true),
+        _hardRefresh: (opts.hardRefresh === true ? 1 : 0),
         outputFormat: "json"
       }
     }, (err, resp, body) => {
