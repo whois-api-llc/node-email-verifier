@@ -137,6 +137,24 @@ let verifier = new Verifier("your_email_verification_api_key", {
 });
 ```
 
+If, for some reason, you notice that a particular email's `validateSMTP` status
+is incorrect, this usually means that the person's email provider has recently
+changed. The email verification API services caches SMTP checks for speed
+purposes, but you can force a cache refresh by specifying the optional
+`hardRefresh` option when making a query.
+
+For instance:
+
+```javascript
+const Verifier = require("email-verifier");
+
+let verifier = new Verifier("your_email_verification_api_key");
+verifier.verify("r@rdegges.com", { hardRefresh: true }, (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+```
+
 By default, this library also handles retrying failed HTTP requests for you. For
 instance: if the verification API service is currently down or having issues,
 your request will be retried up to five consecutive times before failing.
@@ -157,6 +175,10 @@ let verifier = new Verifier("your_email_verification_api_key", {
 
 
 ## Changelog
+
+0.4.0: *05-06-2018*
+
+- Adding support for the `hardRefresh` API option.
 
 0.3.0: *4-15-2018*
 
