@@ -1,6 +1,6 @@
 {
   "name": "email-verifier",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "The best possible way to verify and validate an email address.",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,6 @@
     "request": "^2.82.0"
   },
   "devDependencies": {
-    "mocha": "^3.5.3"
+    "mocha": "^5.2.0"
   }
 }
