@@ -10,15 +10,15 @@ const API_KEY = process.env.API_KEY;
 describe("Verifier", () => {
   describe("#verifyOptions()", () => {
     it("should throw an error if no API key is supplied", () => {
-      assert.throws(() => { new Verifier(); }, "API key required");
+      assert.throws(() => { new Verifier(); }, "/API key required$/");
     });
 
     it("should throw an error if bad API key is supplied", () => {
-      assert.throws(() => { new Verifier(123); }, "API key must be a string");
+      assert.throws(() => { new Verifier(123); }, "/API key must be a string$/");
     });
 
     it("should throw an error if bad opts.retries is supplied", () => {
-      assert.throws(() => { new Verifier("api key", { retries: "retries" }); }, "opts.retries must be a number");
+      assert.throws(() => { new Verifier("api key", { retries: "retries" }); }, "/opts\.retries must be a number$/");
     });
   });
 
